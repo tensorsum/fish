@@ -1,0 +1,15 @@
+-
+    page: https://www.google.com
+-
+    sleep: 1
+-
+    text:
+        name: q
+        set: hello world
+-
+    button:
+        name: btnK
+        click: .
+-
+    page:
+        get: html
