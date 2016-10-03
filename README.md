@@ -6,3 +6,5 @@ Designed to be minimalistic, extendable, polyglot.
 Influenced by Squish (by FrogLogic) and Ansible.
 License is BSD.
 
+Oct 02 2016
+
