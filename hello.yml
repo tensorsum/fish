@@ -10,7 +10,7 @@
         set: hello world
 -
     button:
-        name: btnK
+        name: btnG
         click: .
 -
     page:

@@ -9,6 +9,7 @@
 #
 
 use strict;
+no warnings 'experimental';
 use feature qw(switch);
 
 use YAML::XS;
