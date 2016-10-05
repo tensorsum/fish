@@ -17,5 +17,16 @@ The combination I use is:
 - Perl 5 version 24 (http://www.activestate.com/activeperl)
 
 
+Use: perl fish.pl hello.yml
+
+The play will 
+
+- open the new instance of Chrome browser
+- go to Google home page
+- enter "Hello World" into text field
+- click the Search button 
+- print the results (html stripped)
+- exit the Chrome browser
+
 Oct 02 2016
 
