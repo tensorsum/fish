@@ -16,8 +16,9 @@ The combination I use is:
 - Google chrome ( MS IE )
 - Perl 5 version 24 (http://www.activestate.com/activeperl)
 
+Oct 02 2016
 
-Use: perl fish.pl hello.yml
+# Use: perl fish.pl hello.yml
 
 The play will 
 
@@ -28,5 +29,5 @@ The play will
 - print the results (html stripped)
 - exit the Chrome browser
 
-Oct 02 2016
+Oct 04 2016
 
