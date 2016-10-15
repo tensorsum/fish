@@ -1,0 +1,17 @@
+-
+    browser: chrome
+-
+    page: https://docs.google.com/forms/d/e/1FAIpQLSefsV3eQqDp7Cl0u9sM2j7H2WSFoS09Ns7oCF-h2cGGc2YyiQ/viewform?hl=en&formkey=dDliTk5XU1R4RUMtb2c1WDZxWHNENmc6MQ#gid=0
+-
+    sleep: 1
+-
+    text:
+        name: entry.1000000
+        set: Simple text 1
+-
+    text:
+        name: entry.1000001
+        set: "Multiline\n
+Several Lines\n
+Of text Here\n
+"
