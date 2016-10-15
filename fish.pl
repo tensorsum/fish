@@ -9,7 +9,7 @@
 #
 
 use strict;
-no warnings 'experimental';
+no warnings 'all';
 use feature qw(switch);
 
 use YAML::XS;
@@ -141,5 +141,10 @@ foreach my $e ( @BB ){
 print OUT "sleep 3\nb.close\n";
 close(OUT);
 
-system "ruby FishDriver.rb";
+# We develop on *nix, we run on win
+if ($^O =~ m/win/i) {
+    system "ruby FishDriver.rb";
+} else {
+    system "cat FishDriver.rb";
+}
 
