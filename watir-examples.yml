@@ -11,7 +11,7 @@
 -
     text:
         name: entry.1000001
-        set: "Multiline\n
-Several Lines\n
-Of text Here\n
-"
+        set: | 
+            Multiline
+            Several Lines
+            Of text Here
