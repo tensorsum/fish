@@ -36,6 +36,9 @@ my %c2m = (
     'text-name-set' => 
         sub { B('set_text_by_name', $VH{'name'}, $VH{'set'}) },
 
+    'radio-name-set' => 
+        sub { B('set_radio_by_name', $VH{'name'}, $VH{'set'}) },
+
     'button-name-click' => 
         sub { B('click_button_by_name', $VH{'name'}, $VH{'click'}) },
 
@@ -62,6 +65,7 @@ my %p2p = (
     'page-'         => sub { B('goto_page', $VS) },
     'sleep-'        => sub { B('sleep', $VS) },
     'text-HASH'     => sub { BcontrolH('text') },
+    'radio-HASH'    => sub { BcontrolH('radio') },
     'button-HASH'   => sub { BcontrolH('button') },
     'page-HASH'     => sub { BcontrolH('page') } 
 );
@@ -116,9 +120,15 @@ foreach my $e ( @BB ){
         when( 'browser' )   { print OUT "b = Watir::Browser.new :$p1\n";}
         when( 'goto_page' ) { print OUT "b.goto \"$p1\"\n";}
         when( 'sleep' )     { print OUT "sleep $p1\n"; }
+
         when( 'set_text_by_name' ){ 
             print OUT "b.text_field( :name => '$p1' ).set '$p2'\n";
         }
+
+        when( 'set_radio_by_name' ){ 
+            print OUT "b.radio( :name => '$p1' ).set '$p2'\n";
+        }
+
         when( 'click_button_by_name' ){ 
             print OUT "b.button( :name => '$p1' ).click\n";
         }

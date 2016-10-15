@@ -14,4 +14,9 @@
         set: | 
             Multiline
             Several Lines
-            Of text Here
+            Of text 
+            Here
+-
+    radio:
+        name: entry.1000002
+        set: Watir
