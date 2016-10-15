@@ -36,6 +36,9 @@ my %c2m = (
     'text-name-set' => 
         sub { B('set_text_by_name', $VH{'name'}, $VH{'set'}) },
 
+    'textarea-name-set' => 
+        sub { B('set_textarea_by_name', $VH{'name'}, $VH{'set'}) },
+
     'radio-name-set' => 
         sub { B('set_radio_by_name', $VH{'name'}, $VH{'set'}) },
 
@@ -65,6 +68,7 @@ my %p2p = (
     'page-'         => sub { B('goto_page', $VS) },
     'sleep-'        => sub { B('sleep', $VS) },
     'text-HASH'     => sub { BcontrolH('text') },
+    'textarea-HASH' => sub { BcontrolH('textarea') },
     'radio-HASH'    => sub { BcontrolH('radio') },
     'button-HASH'   => sub { BcontrolH('button') },
     'page-HASH'     => sub { BcontrolH('page') } 
@@ -125,8 +129,12 @@ foreach my $e ( @BB ){
             print OUT "b.text_field( :name => '$p1' ).set '$p2'\n";
         }
 
+        when( 'set_textarea_by_name' ){ 
+            print OUT "b.textarea( :name => '$p1' ).set '$p2'\n";
+        }
+
         when( 'set_radio_by_name' ){ 
-            print OUT "b.radio( :name => '$p1' ).set '$p2'\n";
+            print OUT "b.radio( :name => '$p1' :value => '$p2' ).set\n";
         }
 
         when( 'click_button_by_name' ){ 

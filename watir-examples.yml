@@ -9,7 +9,7 @@
         name: entry.1000000
         set: Simple text 1
 -
-    text:
+    textarea:
         name: entry.1000001
         set: | 
             Multiline
