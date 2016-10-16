@@ -42,6 +42,12 @@ my %c2m = (
     'radio-name-set' => 
         sub { B('set_radio_by_name', $VH{'name'}, $VH{'set'}) },
 
+    'checkbox-name-set' => 
+        sub { B('set_checkbox_by_name', $VH{'name'}, $VH{'set'}) },
+
+    'select-name-set' => 
+        sub { B('set_select_by_name', $VH{'name'}, $VH{'set'}) },
+
     'button-name-click' => 
         sub { B('click_button_by_name', $VH{'name'}, $VH{'click'}) },
 
@@ -70,6 +76,8 @@ my %p2p = (
     'text-HASH'     => sub { BcontrolH('text') },
     'textarea-HASH' => sub { BcontrolH('textarea') },
     'radio-HASH'    => sub { BcontrolH('radio') },
+    'checkbox-HASH' => sub { BcontrolH('checkbox') },
+    'select-HASH'   => sub { BcontrolH('select') },
     'button-HASH'   => sub { BcontrolH('button') },
     'page-HASH'     => sub { BcontrolH('page') } 
 );
@@ -134,7 +142,15 @@ foreach my $e ( @BB ){
         }
 
         when( 'set_radio_by_name' ){ 
-            print OUT "b.radio( :name => '$p1' :value => '$p2' ).set\n";
+            print OUT "b.radio( :name => '$p1', :value => '$p2' ).set\n";
+        }
+
+        when( 'set_checkbox_by_name' ){ 
+            print OUT "b.checkbox( :name => '$p1', :value => '$p2' ).set\n";
+        }
+
+        when( 'set_select_by_name' ){ 
+            print OUT "b.select_list( :name => '$p1').select '$p2'\n";
         }
 
         when( 'click_button_by_name' ){ 

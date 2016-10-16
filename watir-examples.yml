@@ -20,3 +20,12 @@
     radio:
         name: entry.1000002
         set: Watir
+-
+    checkbox:
+        name: entry.1000003
+        set: Python
+-
+    select:
+        name: entry.1000004
+        set: Another
+
