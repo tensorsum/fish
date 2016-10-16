@@ -28,4 +28,8 @@
     select:
         name: entry.1000004
         set: Another
+-
+    button:
+        name: submit
+        click: .
 
